@@ -30,10 +30,10 @@ public class StatsService {
         for (int purchase : purchases) {
             counter += 1;
 
-                if (currentMax < purchase) {
-                    currentMax = purchase;
-                    maxMounts = counter;
-                }
+            if (currentMax < purchase) {
+                currentMax = purchase;
+                maxMounts = counter;
+            }
         }
         return maxMounts;
     }
@@ -55,10 +55,10 @@ public class StatsService {
 
     public int belowAverage(int[] purchases) {
         //Кол - во месяцев, в которых продажи были ниже среднего
-        int  average = averageSum(purchases);
+        int average = averageSum(purchases);
         int counter = 0;
         for (int purchase : purchases) {
-            if (average > purchase){
+            if (average > purchase) {
                 counter += 1;
             }
         }
@@ -67,10 +67,10 @@ public class StatsService {
 
     public int higherAverage(int[] purchases) {
         //Кол - во месяцев, в которых продажи были выше среднего
-        int  average = averageSum(purchases);
+        int average = averageSum(purchases);
         int counter = 0;
         for (int purchase : purchases) {
-            if (average < purchase){
+            if (average < purchase) {
                 counter += 1;
             }
         }
